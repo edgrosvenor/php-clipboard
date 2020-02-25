@@ -19,8 +19,8 @@ class CopyStuff
 {
     public function copyMyName($name = 'Ed Grosvenor')
     {
-        $clipboard = new Clipboard($name);
-        $clipboard->copy();
+        $clipboard = new Clipboard();
+        $clipboard->copy($name);
         // 'Ed Grosvenor' has been copied to your clipboard
     }
 }

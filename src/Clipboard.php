@@ -7,14 +7,16 @@ class Clipboard
     public $contents;
     private $os;
 
-    public function __construct($contents)
+    public function __construct()
     {
-        $this->contents = $contents;
+
         $this->os = php_uname();
     }
 
-    public function copy(): void
+    public function copy($contents): void
     {
+        $this->contents = $contents;
+
         if (preg_match('/windows/i', $this->os)) {
             $this->windows();
 
