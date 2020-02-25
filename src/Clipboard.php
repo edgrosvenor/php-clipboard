@@ -1,12 +1,9 @@
 <?php
 
-
 namespace Edgrosvenor\PHPClipboard;
-
 
 class Clipboard
 {
-
     public $contents;
     private $os;
 
@@ -18,13 +15,14 @@ class Clipboard
 
     public function copy(): void
     {
-
         if (preg_match('/windows/i', $this->os)) {
             $this->windows();
+
             return;
         }
         if (preg_match('/darwin/i', $this->os)) {
             $this->mac();
+
             return;
         }
         $this->linux();
@@ -32,16 +30,16 @@ class Clipboard
 
     private function mac(): void
     {
-        exec('echo ' . $this->contents . ' | pbcopy');
+        exec('echo '.$this->contents.' | pbcopy');
     }
 
     private function linux(): void
     {
-        exec('echo ' . $this->contents . ' | xclip -sel clip');
+        exec('echo '.$this->contents.' | xclip -sel clip');
     }
 
     private function windows(): void
     {
-        exec('echo ' . $this->contents . ' | clip');
+        exec('echo '.$this->contents.' | clip');
     }
 }
