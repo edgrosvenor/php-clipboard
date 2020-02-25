@@ -1,0 +1,20 @@
+{
+    "name": "edgrosvenor/php-clipboard",
+    "description": "A PHP wrapper for Windows, Linux, and Mac Copy to Clipboard commands",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ed Grosvenor",
+            "email": "ed.grosvenor@wickedviral.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Edgrosvenor\\PHPClipboard\\": "src/"
+        }
+    }
+}
