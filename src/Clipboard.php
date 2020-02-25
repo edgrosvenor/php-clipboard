@@ -9,7 +9,6 @@ class Clipboard
 
     public function __construct()
     {
-
         $this->os = php_uname();
     }
 
